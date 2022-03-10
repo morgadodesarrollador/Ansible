@@ -1,7 +1,7 @@
 ---
 - name: Copiar ficheros /etc/hosts a los webservers de Linux
-  hosts: webservers
-  remote_user: luis 
+  hosts: webservers:&sgbd
+  remote_user: morgado 
   become: True 
   tasks:
     - name: copiar fichero hosts
